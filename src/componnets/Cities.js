@@ -8,7 +8,7 @@ function Cities(){
     useEffect(()=>{
         axios.get(url)
         .then((json)=>{
-            setCities(json.data.name)
+            setCities(json.data)
             console.log(json.data)         
         })
         .catch((err)=>{
@@ -16,10 +16,25 @@ function Cities(){
         })
     },[url])
 
+    function getHotels(city){
+       cities.find(()=>console.log('!'))
+    }
+
     return (
-        <div>
-            {cities}  
+        <>
+        <div className="citiesSelect">
+            <span>Select Yor City : </span>
+            <select id="selectCity" onChange={(event)=>getHotels(event.target.value)}>
+                <option hidden>I am in...</option>
+                <option value="Coimbatore" >Coimbatore</option>
+                <option value="Chenai">Chenai</option>
+                <option value="Madhurai">Madhurai</option>
+            </select> 
         </div>
+        <div>
+
+        </div>
+        </>
     )
 }
 

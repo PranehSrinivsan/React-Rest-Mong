@@ -1,6 +1,27 @@
- header{
-     padding-top: 15px;
-     text-align: center;
-     background-color: azure;
-     height: 80px;
- }
+header{
+    padding-top: 15px;
+    text-align: center;
+    background-color: azure;
+    height: 80px;
+}
+
+.addbutton{
+    background-color:rgb(185, 200, 228);
+}
+
+.fa-plus-square{
+    border: none;
+    background-color: rgb(185, 200, 228);
+}
+.fa-plus-square:hover{
+    color:blue;
+}
+
+.cities.container{
+    padding-top: 5px;
+}
+
+.citiesSelect{
+    padding-top: 30px;
+    padding-left: 10px;
+}
