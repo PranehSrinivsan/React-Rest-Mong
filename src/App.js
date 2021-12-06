@@ -1,11 +1,16 @@
 import './App.css';
+import Head from './componnets/Head'
+import Cities from './componnets/Cities';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h3> Project05 </h3>
+        <Head/>
       </header>
+      <div className="cities.container">
+        <Cities/>
+      </div>
     </div>
   );
 }
