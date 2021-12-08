@@ -13,7 +13,7 @@ header{
     border: none;
     background-color: rgb(185, 200, 228);
 }
-.fa-plus-square:hover{
+button:hover{
     color:blue;
 }
 
@@ -24,4 +24,23 @@ header{
 .citiesSelect{
     padding-top: 30px;
     padding-left: 10px;
+}
+
+.hotelcontainer{
+    padding-top: 50px;
+    width: 100px;
+}
+.hotelhead{
+    width: 150px;
+    display: flex;
+}
+
+.fa-map-marker-alt{
+    border: none;
+    background-color: none;
+}
+
+img{
+    width: 100px;
+    height: 100px;
 }
