@@ -9,15 +9,14 @@ function Addhotel(){
     const[location,setLocation]=useState();
     const[locationurl,setLocationurl]=useState();
     const[city,setCity]=useState();
-    function createhotel(){
+    async function createhotel(){
         const purl=`http://localhost:5000/cities/create/${city}/${hotelname}/${imageurl}/${locationurl}`
-        axios.patch(purl)
-        .then(()=>navigate('/'))
+        console.log(purl)
+        await axios.post(purl)
+        .then(navigate('/'))
         .catch((err)=>{
             console.error(err.message);
-        })
-        console.log(hotelname,imageurl,location,locationurl,city);
-        
+        })        
     }
 
     return(
@@ -36,7 +35,7 @@ function Addhotel(){
             <input 
                 type='url'
                 value={imageurl}
-                onChange={(e)=>setImageurl(e.target.value)}
+                onChange={(e)=>setImageurl(e.target.value.toString())}
                 required
             />
             <span>Add Image url</span>
@@ -54,7 +53,7 @@ function Addhotel(){
             <input 
                 type='url' 
                 value={locationurl}
-                onChange={(e)=>setLocationurl(e.target.value)}
+                onChange={(e)=>setLocationurl(e.target.value.toString())}
                 required
             />
             <span>Location url </span>
